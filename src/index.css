@@ -1,0 +1,439 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family:ebrima;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  box-sizing: border-box;
+}
+body, html{
+  width:100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.main-header{
+  background-color: #100523;
+  width: 100%;
+  padding:10px 30px 280px 30px;
+}
+
+.logo-section{
+  display: flex;
+  align-items: center;
+}
+.logo-section img{
+  width:100px;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu{
+  list-style-type: none;
+  font-size: 12px;
+}
+
+.menu > li{
+  padding: 0px;
+  margin: 0px;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.align-bottom{
+  align-items: baseline;
+}
+
+.menu > li{
+  display: inline-block;
+}
+.menu > li > a{
+  text-decoration: none;
+  color:rgba(255, 255, 255, 0.47);
+  display: block;
+  padding: 5px 10px 5px 10px;
+}
+.menu > li > a > span{
+  padding-left:10px
+}
+.menu > li.active > a{
+  color:#fff;
+  background-color: #5F2EF5;
+}
+
+.tray-section > .tray-icon{
+  padding:10px;
+  font-size: 12px;
+  color:rgba(255, 255, 255, 0.47);
+}
+
+.divider{
+  background-color: rgba(255, 255, 255, 0.17);
+  content: '';
+  width:1px;
+  margin:0px 20px 0px 10px !important;
+  padding: 0px !important;
+}
+
+/*
+body 
+*/
+.main-body{
+  margin:auto;
+  margin-top:-250px;
+  max-width: 1000px;
+}
+
+.balance-title{
+  font-size: 9px;
+  font-weight: 600;
+}
+.balance-section{
+  font-size: 10px
+}
+
+.balance-section > span{
+  padding:0px 20px 0px 0px
+}
+
+.balance-section .bal{
+  font-size: 40px
+}
+
+.card-header{
+  font-size: 10px;
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.card-header span.text{
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.card-header span.duration{
+  font-size: 10px;
+  color:rgba(255, 255, 255, 0.37);
+}
+.card-header span {
+  margin: 0px 10px 0px 0px;
+}
+
+.card-section{
+  flex-wrap:nowrap;
+  overflow-x: visible;
+  box-sizing: content-box;
+  padding-bottom: 10px;
+}
+
+.card-body{
+  width: 100%;
+}
+
+.card-container{
+  background-color: #fff;
+  color:#1F2335;
+  width: 31%;
+  max-height: 180px;
+  flex: 0 0 31%;
+  overflow-y: hidden;
+  margin: 0px 30px 0px 0px;
+  min-width: 30%;
+  transition: flex .3s ease-out;
+}
+
+.card-container .card-chart{
+  display:none;
+}
+
+.flex-grow{
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  border-bottom:2px solid #B8AAF4 !important;
+}
+
+.card-container .card-title{
+  font-size: 10px;
+  padding: 5px 20px 5px 20px;
+  text-transform: uppercase;
+}
+
+.card-container .card-logo{
+  padding: 15px 20px 10px 20px;
+}
+
+.card-container .card-title > span{
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.card-container .card-title .text{
+  font-weight: 400;
+}
+
+.flex-grow .card-body, .flex-grow .card-chart{
+  width:50%;
+  display: block;
+}
+
+.flex-grow .card-chart{
+  background-color: #fff;
+}
+
+.fade-switch{
+  position: relative;
+  width: 100%;
+}
+.fade-switch > .action, .fade-switch > .money{
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  padding: 0px 20px 10px 20px;
+}
+.fade-switch > .money{
+  font-size: 28px;
+  opacity: 1;
+  top: 0px;
+  transition: all .4s ease-out;
+}
+.fade-switch > .action{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  bottom: -100px;
+  transition: bottom .2s ease-out;
+}
+
+.fade-switch > .action > .action-text{
+  display: block;
+  width: 80%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.card-container:hover{
+  border-bottom: 0.1px solid #ccc;
+}
+.card-container:hover .fade-switch > .action{
+  position: relative;
+  bottom: 0px;
+}
+
+.card-container:hover .fade-switch > .money{
+  opacity: 0;
+  top: -10px;
+}
+
+.flex-grow:hover .fade-switch > .action{
+  bottom: -100px;
+}
+.flex-grow:hover .fade-switch > .money{
+  opacity: 1;
+  top: 0px;
+}
+
+.tabular-section{
+  margin-top: 50px;
+  color: #100523;
+}
+.tabular-section > .recent-transactions, .tabular-section > .cash-flows{
+  width: 45%;
+  margin:0px 20px 0px 0px;
+}
+
+.t-header > .t-title{
+  display: flex;
+  align-items: baseline;
+}
+.t-header > .t-title > span{
+  display: block;
+  margin:0px 8px 0px 8px;
+}
+
+.t-header > .t-title > .bold-text{
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.t-header > .t-title > .faded-text{
+  color:#a1a1a1;
+  font-size: 11px;
+}
+.t-header > .t-action a{
+  color:#5F2EF5;
+  font-size: 12px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.t-body{
+  margin-top: 20px;
+}
+
+.activity{
+  padding: 10px 0px 10px 0px;
+  cursor: pointer;
+  margin-left: 0px;
+  transition: all .2s ease-in;
+}
+.activity:hover{
+  margin-left: 5px;
+}
+
+.activity .first-col .activity-logo{
+  width:30px;
+  height: 30px;
+  background-color: #100523;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.activity .first-col .activity-details{
+  padding-left: 10px;
+}
+
+.activity .first-col .activity-details .client{
+ font-size: 14px;
+}
+
+.activity .first-col .activity-details .date{
+  font-size: 10px;
+  color:#a1a1a1;
+}
+.activity .second-col .activity-type{
+  font-size: 12px;
+}
+
+.activity .last-col{
+  font-size: 13px;
+}
+.activity .last-col .coins{
+  opacity: 0.5;
+}
+
+.danger{
+  color: red;
+}
+
+.success{
+  color: lightgreen;
+}
+
+.rounded{
+  border-radius: 50%;
+  font-size: 8px !important;
+  background-color: #D2D4E2 !important;
+}
+
+.flex-start{
+  justify-content: flex-start !important;
+}
+
+.cashflow{
+  transition: none !important;
+  margin-left: 0px !important;
+}
+.cashflow .first-col{
+  width: 40%;
+  margin: 0px 30px 10px 0px;
+  padding-bottom: 10px;
+}
+
+.cashflow .activity-details .client{
+  font-size: 9px !important;
+  text-transform: uppercase;
+  color:#595E6C;
+}
+
+.cashflow .activity-details .bg{
+  font-size: 20px;
+  font-weight: 400;
+  color:#595E6C;
+}
+
+.cashflow .first-col.active .client, .cashflow .first-col.active .bg{
+  color: #100523;
+}
+.cashflow .first-col.active{
+  border-bottom: 2px solid #000;
+}
+
+.cashflow .first-col.active  .rounded{
+  background-color: #1F2335 !important;
+}
+
+.range-ui{
+  width:100%;
+  margin-top: 15px;
+}
+
+.range-ui .left{
+  display: flex;
+  align-items: center;
+}
+
+.range-ui .left span{
+  display: block;
+  margin: 0px 8px 0px 0px
+}
+
+.range-ui .left span.indicator{
+  width:20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #5F2EF5;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+.range-ui .left span.client-name, .range-ui .right .money{
+  font-size: 13px;
+}
+
+.range-ui .left span.percent, .range-ui .right .money .coin{
+  font-size: 10px;
+  opacity: .7;
+}
+.range-ui .left span.percent{
+  position: relative;
+  top: 1px;
+}
+
+.range-ui .range{
+  height: 5px;
+  width: 85%;
+  background-color: #5F2EF5;
+  margin-top:10px
+}
+
+@media (prefers-color-scheme: light) {
+  
+}
