@@ -1,13 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faBell, faUser } from "@fortawesome/free-regular-svg-icons"
 import { fa42Group } from "@fortawesome/free-brands-svg-icons"
-import Logo from "../img/Moniepoint_Logo.png"
 const Header = (props)=>{
     return (
     <div className="main-header">
         <div className="container flex-row">
             <div className="logo-section">
-                <img src={Logo} alt="moniepoint logo"/>
+                <img src="vite.svg" alt="moniepoint logo" style={{width:"30px"}}/>
             </div>
             <div className="menu-section">
                 <ul className="menu flex-row">
