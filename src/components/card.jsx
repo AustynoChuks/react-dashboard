@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 const Card = (props)=>{
-    const [showStat, setShowStat] = useState(true);
+    const [showStat, setShowStat] = useState(false);
     const cardContainerRef = useRef();
     const swicthStat = ()=>{
         setShowStat((stat)=>!stat);
